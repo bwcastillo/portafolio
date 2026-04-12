@@ -86,16 +86,78 @@
       font-weight:600;
     }
 
+    .social {
+      display: flex;
+      justify-content: center; /* centra horizontalmente */
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .social a img {
+      width: 35px;
+      margin: 0 10px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .social a img:hover {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+
     @media(max-width:600px){
       header h1 { font-size:2rem; }
     }
+
+    .timeline {
+  max-width: 900px;
+  margin: auto;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.timeline-date {
+  font-weight: 600;
+  color: #1e3c72;
+}
+
+.timeline-content h3 {
+  margin-bottom: 5px;
+}
+
+.timeline-content a {
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: none;
+  color: #2a5298;
+  font-weight: 600;
+}
+
+.timeline-content a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .timeline-item {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-date {
+    margin-bottom: 5px;
+  }
+}
   </style>
 </head>
 <body>
 
 <header>
   <h1>Bryan Castillo</h1>
-  <p>Geógrafo | Análisis de Datos | GIS | Seguridad Pública</p>
+  <p>Geógrafo | Economista | GIS | Ciencia de datos</p>
   <a href="#projects" class="btn">Ver proyectos</a>
 </header>
 
@@ -103,7 +165,7 @@
   <h2>Sobre mí</h2>
   <p>
     Profesional enfocado en análisis espacial, ciencia de datos y políticas públicas.
-    Experiencia en modelamiento de riesgo, crimen y uso de datos geográficos para la toma de decisiones.
+    Experiencia en el procesamiento y análisis de datos para la toma de decisiones.
   </p>
 </section>
 
@@ -111,32 +173,77 @@
   <h2>Proyectos</h2>
   <div class="projects">
 
-    <div class="card">
-      <h3>Mapa de delitos</h3>
-      <p>Visualización interactiva de eventos delictuales con análisis temporal.</p>
+  <div class="card">
+      <h3>2025-2026: Contaminación PM2.5</h3>
+      <p>Análisis espacial del impacto de incendios forestales en la salud de las personas.</p>
     </div>
 
     <div class="card">
-      <h3>Exposición al crimen</h3>
-      <p>Modelo que incorpora población flotante para medir riesgo real.</p>
+      <h3>2023-2024: Observatorio de Seguridad Pública</h3>
+      <p>Sistema de reportería semanal con datos capturados en terreno con información en tiempo real.</p>
     </div>
 
     <div class="card">
-      <h3>Contaminación PM2.5</h3>
-      <p>Análisis espacial de impacto de incendios forestales.</p>
+      <h3>2022-2023: Índice de sociovulnerabilidad ante inundaciones</h3>
+      <p>Procesamiento de información para la creación de indicadores espaciales bivariables (LISA) en Canadá.</p>
+    </div>
+    
+    <div class="card">
+      <h3>2019-2021: Movilidad urbana</h3>
+      <p>Accesibilidad física de adultos mayores caminando de metro.</p>
     </div>
 
   </div>
+</section>
+<section class="timeline">
+  <h2>Trayectoria</h2>
+
+  <div class="timeline-item">
+    <div class="timeline-date">2019–2023</div>
+    <div class="timeline-content">
+      <h3>Municipalidad de San Ramón — Analista GIS</h3>
+      <p>
+        Desarrollo de modelos de análisis espacial para seguridad pública.
+      </p>
+      <a href="https://github.com/TU_USUARIO/proyecto1" target="_blank">
+        Ver proyecto destacado
+      </a>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">2023–Presente</div>
+    <div class="timeline-content">
+      <h3>Proyecto independiente — Data & GIS</h3>
+      <p>
+        Modelamiento de exposición al crimen con datos espaciales.
+      </p>
+      <a href="https://github.com/TU_USUARIO/proyecto2" target="_blank">
+        Ver proyecto
+      </a>
+    </div>
+  </div>
+
 </section>
 
 <section>
   <h2>Contacto</h2>
-  <p style="text-align:center;">bryan@email.com</p>
-  <div class="social" style="text-align:center;">
-    <a href="#">LinkedIn</a>
-    <a href="#">GitHub</a>
-  </div>
+  <p style="text-align:center;">bwcastillo@uc.cl</p>
+<div class="social">
+
+  <!-- GitHub -->
+  <a href="https://github.com/TU_USUARIO" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+  </a>
+
+  <!-- Google Scholar -->
+  <a href="https://scholar.google.com/citations?user=TU_ID" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2702/2702602.png" alt="Google Scholar">
+  </a>
+
+</div>
 </section>
+
 
 <footer>
   <p>© 2026 Bryan Castillo</p>
